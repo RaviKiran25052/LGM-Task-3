@@ -69,7 +69,7 @@ document.addEventListener('DOMContentLoaded', function() {
 		cardScroll.style.height = registerBoxHeight-25 + 'px';
 		cardScroll.style.overflowY = 'scroll';
 		
-		clearForm();
+		// clearForm();
 	});
 		
 	function deleteUserCard(event) {
