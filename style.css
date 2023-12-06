@@ -1,0 +1,270 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+:root {
+  --primary-color: #c6c3c3;
+  --second-color: #ffffff;
+  --black-color: #000000;
+}
+
+body {
+  background-image: url("bg.jpg");
+  background-size: cover;
+}
+
+a {
+  text-decoration: none;
+  color: var(--second-color);
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.wrapper {
+  max-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 80px 0;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.register_box {
+  position: relative;
+  width: 400px;
+  backdrop-filter: blur(10px);
+  border: 2px solid var(--primary-color);
+  border-radius: 15px;
+  padding: 40px 30px 0px;
+  color: var(--second-color);
+  box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+.register-header {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--primary-color);
+  width: 150px;
+  height: 40px;
+  border-radius: 0 0 20px 20px;
+}
+
+.register-header span {
+  font-size: 16px;
+  font-weight: bold;
+  color: var(--black-color);
+}
+
+.register-header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -30px;
+  width: 30px;
+  height: 20px;
+  border-top-right-radius: 50%;
+  background: transparent;
+  box-shadow: 15px 0 0 0 var(--primary-color);
+}
+
+.register-header::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -30px;
+  width: 30px;
+  height: 22px;
+  border-top-left-radius: 50%;
+  background: transparent;
+  box-shadow: -15px 0 0 0 var(--primary-color);
+}
+
+.input_box {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin: 25px 0;
+}
+
+.choice {
+	display: flex;
+	align-items: center;
+  margin: 25px 10px;
+}
+.choice label:first-child {
+  min-width: 80px;
+  margin-right: 5px;
+}
+
+.input-field {
+  width: 100%;
+  height: 45px;
+  font-size: 14px;
+  background: transparent;
+  color: var(--second-color);
+  padding-inline: 20px 50px;
+  border: 2px solid var(--primary-color);
+  border-radius: 30px;
+  outline: none;
+}
+
+.label {
+  position: absolute;
+  top: 10px;
+  left: 20px;
+  transition: 0.2s;
+}
+
+.input-field:focus ~ .label,
+.input-field:valid ~ .label {
+  position: absolute;
+  top: -12px;
+  left: 20px;
+  font-size: 12px;
+  font-weight: bold;
+  background-color: var(--primary-color);
+  border-radius: 30px;
+  color: var(--black-color);
+  padding: 2px 10px;
+}
+
+.icon {
+  position: absolute;
+  top: 16px;
+  right: 18px;
+  font-size: 18px;
+}
+.input-submit {
+  display: flex;
+}
+
+.input-submit button {
+  margin: 0 10px 30px;
+  height: 40px;
+  width: 50%;
+  background: var(--second-color);
+  font-weight: bold;
+  font-size: 14px;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: 0.3s ease-in;
+}
+
+.input-submit button:first-child:hover[disabled] {
+  cursor: not-allowed;
+}
+
+.input-submit button:first-child:hover:not([disabled]) {
+  background-color: green;
+  color: white;
+}
+
+.input-submit button:last-child:hover {
+  background-color: red;
+  color: white;
+}
+
+.users-container {
+  position: relative;
+  transition: opacity 0.5s ease-in-out;
+}
+.card-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.user-count {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  font-size: 20px;
+  color: var(--second-color);
+  margin: 10px 0;
+  padding: 0px 20px;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-50%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes slideOut {
+  from {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateX(-50%);
+  }
+}
+.user-card {
+  animation: slideIn 0.5s ease-in-out;
+  position: relative;
+  width: 400px;
+  font-size: 14px;
+  backdrop-filter: blur(10px);
+  border: 2px solid var(--primary-color);
+  border-radius: 15px;
+  color: var(--second-color);
+  padding: 20px;
+  margin: 10px;
+}
+.user-card.remove-animation {
+  animation: slideOut 0.5s ease-in-out;
+}
+
+.user-card label {
+  display: inline-block;
+  width: 100px;
+  font-weight: bold;
+}
+
+.user-card p {
+  display: inline-block;
+  margin-bottom: 8px;
+}
+
+.user-card button {
+  position: absolute;
+  border-radius: 8px;
+  border: transparent;
+  width: 25px;
+  font-size: 18px;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1;
+  transition: 0.3s;
+}
+
+.user-card button:hover {
+  background-color: red;
+  color: white;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 564px) {
+  .wrapper {
+    padding: 20px;
+  }
+
+  .register_box {
+    padding: 7.5em 1.5em 4em 1.5em;
+  }
+}

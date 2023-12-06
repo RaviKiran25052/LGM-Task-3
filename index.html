@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>RegisterForm</title>
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Poppins&amp;display=swap'>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+<div class="wrapper">
+  <form id="registrationForm" class="register_box">
+    <div class="register-header">
+      <span>Register Form</span>
+    </div>
+    <div class="input_box">
+      <input type="text" id="name" class="input-field" required>
+      <label for="name" class="label">User Name</label>
+      <i class="bx bx-user icon"></i>
+    </div>
+    <div class="input_box">
+      <input type="email" id="email" class="input-field" required>
+      <label for="email" class="label">Email</label>
+      <i class='bx bx-envelope icon'></i>
+    </div>
+    <div class="input_box">
+      <input type="text" id="web" class="input-field" required>
+      <label for="web" class="label">Website</label>
+      <i class='bx bx-globe icon'></i>
+    </div>
+    <div class="input_box">
+      <input type="text" id="image" class="input-field" required>
+      <label for="image" class="label">Image Link</label>
+      <i class='bx bx-image icon'></i>
+    </div>
+    <div class="choice">
+      <label>Gender :</label>
+      <input type="radio" id="male" name="gender" value="male">&nbsp;
+      <label for="male">Male</label>&emsp;
+      <input type="radio" id="female" name="gender" value="female">&nbsp;
+      <label for="female">Female</label>
+    </div>
+    <div class="choice">
+      <label>Skills :</label>
+      <input type="checkbox" id="html" name="skills" value="HTML">&nbsp;
+      <label for="html">HTML</label>&emsp;
+      <input type="checkbox" id="css" name="skills" value="CSS">&nbsp;
+      <label for="css">CSS</label>&emsp;
+      <input type="checkbox" id="js" name="skills" value="JS">&nbsp;
+      <label for="js">JavaScript</label>
+    </div>
+    <div class="input-submit">
+      <button type="submit" id="enrollBtn" disabled>Enroll student</button>
+      <button type="button" id="clearBtn">Clear</button>
+    </div>    
+  </form>
+  <div class="users-container" id="userList">
+  </div>
+</div>  
+<script src="script.js"></script>
+</body>
+</html>
