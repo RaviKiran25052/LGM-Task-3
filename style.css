@@ -26,7 +26,6 @@ a:hover {
 }
 
 .wrapper {
-  max-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -258,13 +257,15 @@ a:hover {
   color: white;
   cursor: pointer;
 }
-
-@media only screen and (max-width: 564px) {
-  .wrapper {
-    padding: 20px;
-  }
-
+@media (max-width: 900px) {
+  
   .register_box {
-    padding: 7.5em 1.5em 4em 1.5em;
+    margin: auto;
+  }
+  .wrapper {
+    flex-direction: column;
+  }
+  .user-count {
+    margin-top: 40px;
   }
 }
