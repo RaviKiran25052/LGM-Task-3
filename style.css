@@ -26,6 +26,7 @@ a:hover {
 }
 
 .wrapper {
+  max-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -263,6 +264,7 @@ a:hover {
     margin: auto;
   }
   .wrapper {
+    max-height: none;
     flex-direction: column;
   }
   .user-count {
